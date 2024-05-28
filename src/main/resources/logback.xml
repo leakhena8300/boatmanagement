@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	
+    <!-- Log level configuration -->
+    <logger name="root" level="DEBUG" />
+    <logger name="org.springframework.web" level="DEBUG" />
+    <logger name="org.hibernate" level="DEBUG" />
+    
+    <!-- Add logger for BoatController class -->
+    <logger name="c.b.s.s.p.s.jwt.BoatController" level="DEBUG" />
+    
+     <!-- Add logger for CustomAuthEntryPointJwt class -->
+    <logger name="c.b.s.s.p.s.jwt.CustomAuthEntryPointJwt" level="DEBUG" />
+    
+    <!-- Add logger for package -->
+    <logger name="com.boat.management.security" level="DEBUG" />
+
+	<!-- Add logger for CorsFilter class -->
+    <logger name="org.springframework.web.filter.CorsFilter" level="DEBUG" />
+
+    <!-- Log pattern -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    
+    <root level="DEBUG">
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>
